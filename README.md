@@ -7,4 +7,4 @@ change the skill in a2a-swarm first, then update this mirror to the same content
 
 | Mirror of | Commit |
 | --- | --- |
-| relux-works/a2a-swarm `internal/skill/files/a2a` | ea76c25a649b4f0f9b31fd2083011288cbbebd65 |
+| relux-works/a2a-swarm `internal/skill/files/a2a` | bb340c58059bc811aeaa9cb0b462671156453153 |
