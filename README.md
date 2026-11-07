@@ -7,7 +7,7 @@ change the skill in a2a-swarm first, then update this mirror to the same content
 
 | Mirror of | Commit |
 | --- | --- |
-| relux-works/a2a-swarm `internal/skill/files/a2a` | 3f66817418942bc2157a4437e0384b27cd3663e8 |
+| relux-works/a2a-swarm `internal/skill/files/a2a` | 467b4a9d26b79052cfcd6e87e9ad2e992036ae11 |
 
 ## Command package v0.2.3
 
@@ -24,7 +24,7 @@ The candidate build pin is `9eb007917d7fc18e7e3f1f2c820fad6119c6b573`,
 on the append-only [curator-build branch](https://github.com/relux-works/a2a-swarm/tree/curator-build).
 That commit contains the root build descriptor and regenerated vendor closure;
 vendor is deliberately absent from a2a-swarm main. Consumers select the full
-commit, not the branch name. See the [branch maintenance rule](https://github.com/relux-works/a2a-swarm/blob/3f66817418942bc2157a4437e0384b27cd3663e8/docs/curator-build.md).
+commit, not the branch name. See the [branch maintenance rule](https://github.com/relux-works/a2a-swarm/blob/467b4a9d26b79052cfcd6e87e9ad2e992036ae11/docs/curator-build.md).
 No build tag is declared. A platform owner must create signed release tag
 `v0.2.3` on the accepted skill commit; this candidate creates no release tag.
 
