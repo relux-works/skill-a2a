@@ -1,10 +1,27 @@
 {
-  "schema_version": 3,
+  "schema_version": 7,
   "capabilities": {
     "network": [
       "matrix.relux.works",
       "github.com",
       "api.github.com"
     ]
+  },
+  "build_repositories": {
+    "a2a-swarm": {
+      "git": "https://github.com/relux-works/a2a-swarm.git",
+      "locked_commit": {
+        "object_format": "sha1",
+        "hex": "9eb007917d7fc18e7e3f1f2c820fad6119c6b573"
+      }
+    }
+  },
+  "commands": {
+    "a2a": {
+      "type": "build",
+      "driver": "go-repository-v1",
+      "repository": "a2a-swarm",
+      "target": "a2a"
+    }
   }
 }
