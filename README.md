@@ -13,18 +13,16 @@ change the skill in a2a-swarm first, then update this mirror to the same content
 
 The schema-7 manifest exports `a2a` through Curator's `go-repository-v1` driver.
 It pins the external `a2a-swarm` repository; the embedded skill prose remains
-the mirror identified above. The package manifest is maintained here. The mirrored installation guidance
-comes from the source candidate identified above, newer than the binary's
-main baseline `711ed0d6f88ddb498b711521039f0e9980788aa0`. The binary pin remains
-unchanged because those source instructions have not landed. Its embedded
-`a2a skill install` text is older; retain the Curator-managed mirror instead.
-The source owner controls the later main-to-build refresh and consumer repin.
+the mirror identified above. The package manifest is maintained here. The binary
+source is main `72156cf666a1e7c15b26a9b3011fadef1d2bb2c5`, including the landed
+managed-command guidance. The build refresh preserves the original pin as an
+ancestor and regenerates the vendor closure from that exact main tree.
 
-The candidate build pin is `9eb007917d7fc18e7e3f1f2c820fad6119c6b573`,
+The candidate build pin is `69f361b6bb4684a32b5d90949cdd9606cae4bdf6`,
 on the append-only [curator-build branch](https://github.com/relux-works/a2a-swarm/tree/curator-build).
 That commit contains the root build descriptor and regenerated vendor closure;
 vendor is deliberately absent from a2a-swarm main. Consumers select the full
-commit, not the branch name. See the [branch maintenance rule](https://github.com/relux-works/a2a-swarm/blob/ed31a8b24a90e821cac6a6ef6b359f26606dc30c/docs/curator-build.md).
+commit, not the branch name. See the [branch maintenance rule](https://github.com/relux-works/a2a-swarm/blob/72156cf666a1e7c15b26a9b3011fadef1d2bb2c5/docs/curator-build.md).
 No build tag is declared. A platform owner must create signed release tag
 `v0.2.3` on the accepted skill commit; this candidate creates no release tag.
 
@@ -33,7 +31,7 @@ No build tag is declared. A platform owner must create signed release tag
 Schema 7 requires Curator **v0.14.0-rc.1 or newer**; older versions reject
 this manifest. Repository-build support also depends on the target platform
 and Curator revision. The macOS witness uses a locally built Curator main at
-`470331906654c65169b88bb9579c0c929ed272df`, not an installed release.
+`8eefd7022dc4a3ad74483a666b2ad439c70c02a1`, not an installed release.
 Linux needs a new Curator release tag and fresh evidence from a Linux seat;
 this candidate supplies no Linux qualification.
 
