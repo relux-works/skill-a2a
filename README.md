@@ -2,19 +2,21 @@
 
 The `a2a` agent skill as a root-level package, so Curator profiles can declare it as an ordinary Git skill.
 
-Source of truth: `relux-works/a2a-swarm`, path `internal/skill/files/a2a`. This repository is a published mirror:
-change the skill in a2a-swarm first, then update this mirror to the same content and record the source commit below.
+Source of truth: `relux-works/a2a-swarm`, path `internal/skill/files/a2a`. This repository publishes a verbatim mirror of `SKILL.md` and `references/`:
+change the skill in a2a-swarm first, then update these files to the same content and record the source commit below.
+The command package manifest `agent-skill.json` is maintained here separately from the source skill manifest.
 
 | Mirror of | Commit |
 | --- | --- |
-| relux-works/a2a-swarm `internal/skill/files/a2a` | ed31a8b24a90e821cac6a6ef6b359f26606dc30c |
+| relux-works/a2a-swarm `internal/skill/files/a2a` prose | a17b483e9850ccaae6a44e6a2d1389665c3f5f29 |
 
 ## Command package v0.2.3
 
 The schema-7 manifest exports `a2a` through Curator's `go-repository-v1` driver.
 It pins the external `a2a-swarm` repository; the embedded skill prose remains
-the mirror identified above. The package manifest is maintained here. The binary
-source is main `72156cf666a1e7c15b26a9b3011fadef1d2bb2c5`, including the landed
+the mirror identified above. The mirror source includes a text-only installation-route
+fix landed after the binary build, so its source commit differs from the unchanged
+binary pin. The binary source is main `72156cf666a1e7c15b26a9b3011fadef1d2bb2c5`, including the landed
 managed-command guidance. The build refresh preserves the original pin as an
 ancestor and regenerates the vendor closure from that exact main tree.
 
