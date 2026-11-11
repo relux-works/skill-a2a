@@ -8,15 +8,15 @@ The command package manifest `agent-skill.json` is maintained here separately fr
 
 | Mirror of | Commit |
 | --- | --- |
-| relux-works/a2a-swarm `internal/skill/files/a2a` prose | a17b483e9850ccaae6a44e6a2d1389665c3f5f29 |
+| relux-works/a2a-swarm `internal/skill/files/a2a` prose | 18e05a2f3d196b3ecb4ba67cdbdc58db0d180b73 |
 
 ## Command package v0.2.3
 
 The schema-7 manifest exports `a2a` through Curator's `go-repository-v1` driver.
 It pins the external `a2a-swarm` repository; the embedded skill prose remains
-the mirror identified above. The mirror source includes a text-only installation-route
-fix landed after the binary build, so its source commit differs from the unchanged
-binary pin. The binary source is main `72156cf666a1e7c15b26a9b3011fadef1d2bb2c5`, including the landed
+the mirror identified above. That later prose pin includes owned-launch trust and
+selected-profile server guidance; it does not upgrade the unchanged binary or
+build pins. The binary source is main `72156cf666a1e7c15b26a9b3011fadef1d2bb2c5`, including the landed
 managed-command guidance. The build refresh preserves the original pin as an
 ancestor and regenerates the vendor closure from that exact main tree.
 
@@ -63,8 +63,8 @@ an account, connect to Matrix, or qualify runtime activation.
 The managed build disables CGO and does not enable native Sherpa voice.
 Legacy/default credentials use the file backend (0600 files) when
 `A2A_SECRET_STORE` is unset or `file`; no libsecret or DBus is required.
-**Keychain mode and named connections are currently unusable under the
-managed build on macOS too**: the required sibling `a2a-keychain-status`
+**Keychain mode and Keychain-backed named connections are currently unusable
+under the managed build on macOS too**: the required sibling `a2a-keychain-status`
 helper is not delivered beside Curator's artifact. Linux also rejects the
 Keychain backend. Installing the CLI does not fix these runtime limits.
 They belong to the source-owner runtime task; account provisioning and live
