@@ -8,7 +8,7 @@ The command package manifest `agent-skill.json` is maintained here separately fr
 
 | Mirror of | Commit |
 | --- | --- |
-| relux-works/a2a-swarm `internal/skill/files/a2a` prose | 18e05a2f3d196b3ecb4ba67cdbdc58db0d180b73 |
+| relux-works/a2a-swarm `internal/skill/files/a2a` prose | f3147bd889e6abef805764bf09108b534f2a258b |
 
 ## Command package v0.2.3
 
