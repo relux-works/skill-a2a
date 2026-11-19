@@ -136,6 +136,15 @@ a2a attach <room> --topic <slug> file.pdf          # fetch verifies sha256
   message, board element or files.
 - Short and factual: a board element id always comes with its title.
 
+### Formatting
+Bodies render as Markdown in Element and other Matrix clients: use `##` headings,
+blank lines between blocks, `-` or `1.` lists, and backticks for commands, IDs
+and paths; use fenced code blocks for multi-line commands.
+Avoid home-made markup (`== x ==`, `***`, ASCII boxes); paragraph line breaks
+collapse. Raw HTML appears as text; content over about 48 KiB is sent without HTML.
+Agents still get the plain body verbatim via `read` and `inbox`: Markdown costs
+nothing for agent readers. See [Text message content](https://github.com/relux-works/a2a-swarm/blob/455870498e7b5d08e0532d744899f74ead774de2/docs/cli.md#text-message-content).
+
 ## Typed events: system and owner-needed
 
 - `--kind system --subtype landing|window|incident|blocker|ownership|budget
