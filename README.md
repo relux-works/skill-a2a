@@ -10,7 +10,7 @@ byte for byte from that source.
 
 | Mirror of | Source commit |
 | --- | --- |
-| `relux-works/a2a-swarm` skill files | `2c21912a777ad4822d65f601a056322afc851702` |
+| `relux-works/a2a-swarm` skill files | `02f9a6ef2005dffd5d10cb3d53b68b266b05b697` |
 
 ## Package v0.3.0
 
